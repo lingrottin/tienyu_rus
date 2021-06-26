@@ -1,0 +1,40 @@
+# Tienyu's Russian Inputing Schema for RIME
+schema:
+  schema_id: tienyu_rus
+  name: Tienyu's Russian
+  versiom: "0.1"
+  author:
+    - Tienyu <ellistwooten8269@outlook.com>
+  description: |
+    Schema for russian with windows-like multi-alphabet-to-one support.
+  
+engine:
+  processors:               #Accroding to Rime's wiki
+    - speller
+    - selector
+    - navigator
+    - punctuator
+    - fluid_editor
+
+  segmentors:
+    - abc_segmentor
+    - punct_segmentor
+    - abc_segmentor
+    - fallback_segmentor
+  translators:
+    - table_translator
+    - punct_segmentor
+    - echo_translator
+
+  fliters: #maybe none
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+  max_code_length: 2
+punctuator:
+  half_shape: &symtable
+    '""' : { pair: [ '«', '»' ] }
+    '''' : { pair: [ '«', '»' ] }
+  full_shape: *symtable
+translator:
+  dictionary: tienyu_rus
+
