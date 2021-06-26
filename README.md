@@ -1,2 +1,63 @@
 # tienyu_rus
-Tienyu's Russian input schema for Rime with windows-like multi-alphabet-to-one support.
+Tienyu's Russian input schema for Rime with windows-like multi-alphabet-to-one support.  
+适配Rime的罗马转写到俄语的输入方案，具有仿Windows（Windows 10默认俄语键盘助记键）的多拉丁字母到单俄语字母支持。  
+## Attention
+作者根据字母发音对标准转写进行了部分改动，请见谅。  
+改动列表：  
+|字母|标准转写|tienyu_rus|
+|-|-|-|
+|е|e|ye|
+|щ|shch（shch并不是该字母的俄语发音，对此存疑）|x（仿自汉语拼音）|
+|й|y|j|
+  
+## Usage
+输入方案的配置请遵循[Rime Wiki](https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE)  
+以下是本输入方案的码表：  
+
+|西里尔字母|拉丁字母|
+|-|-|
+|а|a|
+|б|b|
+|в|v|
+|г|g|
+|д|d|
+|е|ye|
+|ё|yo|
+|ж|zh|
+|з|z|
+|и|i|
+|й|j|
+|к|k|
+|л|l|
+|м|m|
+|н|n|
+|о|o|
+|п|p|
+|р|r|
+|с|s,*~~ss~~*|
+|т|t|
+|у|u|
+|ф|f|
+|х|h|
+|ц|c,ts|
+|ч|ch|
+|ш|sh|
+|щ|x|
+|*~~ъ~~*|*~~"~~*|
+|ы|y,*~~yy~~*|
+|*~~ь~~*|*~~'~~*|
+|э|e|
+|ю|yu|
+|я|ya|
+  
+被标记为*~~斜体带删除线~~*的项由于技术受限暂时无法完成，请见谅。
+
+## Todo
+如你所见，本方案还有诸多未完善之处。受限于技术，还存在许多问题。  
+|序号|问题|例子|
+|-|-|-|
+|1|不能有多个候选项|如`ts`只能是`ц`而不能是`тс`|
+|2|需要按两下空格才能真正上屏|在输入完毕后不能直接修改下划线外的内容|
+|3|标点符号会被分析而不是直接上屏|若想输入\，只能输入后按下`<Space>``<Space>`|
+|4|无法输入软音符号、硬音符号和引号|-|
+|5|无法实现仿Windows的同时方便使用|默认Windows10的助记键俄语键盘中，`с`是`ss`，而本方案中`с`亦可以用单个`s`表示，受限于本表格第一项，若把`ss`加入映射，则`ss`不可以是`сс`|
