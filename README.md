@@ -9,6 +9,7 @@ Tienyu's Russian input schema for Rime with windows-like multi-alphabet-to-one s
 |е|e|ye|
 |щ|shch（shch并不是该字母的俄语发音，对此存疑）|x（仿自汉语拼音）|
 |й|y|j|
+|э|ye|e|
   
 ## Usage
 输入方案的配置请遵循[Rime Wiki](https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE)  
